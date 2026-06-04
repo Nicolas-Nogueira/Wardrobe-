@@ -1,8 +1,8 @@
-# WARDRODE
- A web app where users can upload and categorize their clothes to generate outfit combinations.
+# Wardrobe-
+
+Wardrobe is a web application that allows users upload clothing items to a catalog to generate outfits. The app helps users build a digital closet and easily create outfits from the pieces they already own.
 
 ---
-
 
 # How to run 
 
@@ -36,6 +36,5 @@
 
 - wardrobe.html: the wardrobe page html
  
-
 
 
