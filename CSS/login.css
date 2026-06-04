@@ -1,0 +1,170 @@
+/* Had some help from tutorial to help make the login page look nice */
+
+* {
+    box-sizing: border-box; /* ensures padding/border don’t increase element size */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full viewport height for centering vertically */
+}
+
+/* LOGIN PAGE */
+
+.background {
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* makes background image fill the screen without distortion */  
+}
+
+.login-page-wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(40px); /* creates the blur effect where the login/registration info is displayed*/
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* hides sliding forms when they move */
+    transition: height 0.2s ease; /* smooth height change when switching forms */
+}
+
+.login-page-wrapper.active {
+    height: 520px; /* expands to fit register form */
+}
+
+.login-page-wrapper .form-box {
+    width: 100%;
+    padding: 40px; 
+}
+
+.login-page-wrapper .form-box.login {
+    transition: transform 0.18s ease;
+    transform: translateX(0); /* login form starts visible */
+}
+
+.login-page-wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px); /* slides login form out to the left */
+}
+
+.login-page-wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px); /* starts off-screen to the right */
+}
+
+.login-page-wrapper.active .form-box.register {
+    transition: transform 0.18s ease;
+    transform: translateX(0); /* slides into view */
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000000;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%); /* vertically centers label inside input */
+    color: #000000;
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none; /* allows clicks to go through to input */
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px; /* moves label up when typing */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.remember-forgot {
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #000000; /* styles checkbox color */
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #1e01f2;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background: #9078ed;
+}
+
+.login-register {
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.login-register a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}

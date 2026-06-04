@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home Page for Wardrobe Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="CSS/style.css" rel="stylesheet" />
+
+      
+    <script type="module">
+      import App from "./JS/genOutfits.js";
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        const app = new App();
+        
+        const generateBtn = document.querySelector("#generate-outfit-btn");
+        if (generateBtn) {
+          generateBtn.addEventListener("click", () => {
+            app.randomOutfit();
+          });
+        }
+      });
+    </script>
+
+</head>
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="wardrobe.html">Wardrobe</a></li>
+         </ul>
+
+         <div class="nav-right">
+            <img src="images/profilepic.png" alt="profile pic icon" class="profile-pic">
+        </div>
+      </nav>
+   </header>
+
+     <main>
+
+      <div class="sidebar" id="sidebar">
+         <button class="sidebar-toggle" id="sidebarToggle"><img src="images/menuicon.png"></button>
+         <div class="filter-section">
+             <h4>Clothing Type</h4>
+             <label><input type="checkbox" name="itemFilter" value="shirts"> Shirts</label>
+             <label><input type="checkbox" name="itemFilter" value="jackets"> Jackets</label>
+             <label><input type="checkbox" name="itemFilter" value="pants"> Pants</label>
+             <label><input type="checkbox" name="itemFilter" value="shorts"> Shorts</label>
+             <label><input type="checkbox" name="itemFilter" value="hoodies"> Hoodies</label>
+             <label><input type="checkbox" name="itemFilter" value="sweaters"> Sweaters</label>
+             <label><input type="checkbox" name="itemFilter" value="shoes"> Shoes</label>
+         </div>
+     
+         <div class="filter-section">
+             <h4>Season</h4>
+             <label><input type="checkbox" name="itemFilter" value="spring"> Spring</label>
+             <label><input type="checkbox" name="itemFilter" value="summer"> Summer</label>
+             <label><input type="checkbox" name="itemFilter" value="autumn"> Autumn</label>
+             <label><input type="checkbox" name="itemFilter" value="winter"> Winter</label>
+         </div>
+     
+         <div class="filter-section">
+             <h4>Style</h4>
+             <label><input type="checkbox" name="itemFilter" value="casual"> Casual</label>
+             <label><input type="checkbox" name="itemFilter" value="business casual"> Business Casual</label>
+             <label><input type="checkbox" name="itemFilter" value="formal"> Formal</label>
+             <label><input type="checkbox" name="itemFilter" value="sportwear"> Sportwear</label>
+         </div>
+     </div>
+
+     <section id="outfit-generator">
+      <div class="clothing-container">
+
+         <button id="generate-outfit-btn" type="button" >Generate Outfit</button>
+    
+        <!-- TOP SLOT -->
+        <div class="clothing-windows" id="top-slot">
+          <button class="arrow-btn-left-arrow" aria-label="Previous item">&#8592;</button>
+    
+          <figure class="clothing-display">
+            <!-- main clothing image -->
+            <img id ="top-image" src="images/arsHood.jpeg" alt="top-image">
+            <!-- lock button inside the box -->
+            <button class="icon-btn lock-btn" aria-pressed="false" aria-label="Lock this item">
+              <img src="images/unlocked.png" alt="">
+            </button>
+          </figure>
+    
+          <button class="arrow-btn-right-arrow" aria-label="Next item">&#8594;</button>
+        </div>
+    
+        <!-- BOTTOMS SLOT -->
+        <div class="clothing-windows" id="bottoms-slot">
+          <button class="arrow-btn-left-arrow" aria-label="Previous item">&#8592;</button>
+    
+          <figure class="clothing-display">
+            <img id = "bottom-image" src="images/blackShort.jpeg" alt="bottom-image">
+            <button class="icon-btn lock-btn" aria-pressed="false" aria-label="Lock this item">
+              <img src="images/unlocked.png" alt="">
+            </button>
+          </figure>
+    
+          <button class="arrow-btn-right-arrow" aria-label="Next item">&#8594;</button>
+        </div>
+    
+        <!-- SHOES SLOT -->
+        <div class="clothing-windows" id="shoes-slot">
+          <button class="arrow-btn-left-arrow" aria-label="Previous item">&#8592;</button>
+    
+          <figure class="clothing-display">
+            <img id = "shoes-image" src="images/redShoes.jpeg" alt="shoes-image">
+            <button class="icon-btn lock-btn" aria-pressed="false" aria-label="Lock this item">
+              <img src="images/unlocked.png" alt="">
+            </button>
+          </figure>
+    
+          <button class="arrow-btn-right-arrow" aria-label="Next item">&#8594;</button>
+        </div>
+    
+      </div>
+    </section>
+     </main>
+
+
+     <script src="JS/sidebar.js"></script>
+</body>
+</html>

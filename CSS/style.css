@@ -1,0 +1,299 @@
+/* STYLING */
+:root {
+    --color-base: #F5F4F0;
+    --color-text: #0F0F0F;
+    --color-accent-1: #A6AAA0;
+    --color-accent-2: #D6CBBF;
+    --color-cta: #9A6E5F;
+}
+
+body {
+    background-color: var(--color-base);
+    color: var(--color-text);
+    padding-top: 80px;
+}
+
+
+/* NAVBAR */
+
+nav {
+    position: fixed; /* always stays on screen */
+    top: 0;
+    inline-size: 100%; /* full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-base);
+    border-bottom: 1px solid var(--color-accent-2);
+}
+
+.nav-right { /* separate class to put the old search and profile pic on the right hand side of the nav bar */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 50px;
+}
+
+nav ul {
+    list-style: none; /* removes bullet points */
+    display: flex;
+    justify-content: start; /* aligns items to the left of adaptive flex box*/
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 20px; /* adds space between list items */
+}
+
+nav ul li a {
+    color: var(--color-text);
+    text-decoration: none; /* removes underline */
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-bottom: 2px; /* adds space for the border to be below the page titles */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid var(--color-cta);/* white line under page when hovering */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid var(--color-cta); /* white line under current page */
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent-1);
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 82px;
+    left: -260px; /* leave some visible area */
+    width: 270px;
+    height: 100%;
+    background: var(--color-base);
+    box-shadow: 5px 0px 5px -2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 20px;
+    border-right: 1px solid var(--color-accent-2);
+}
+
+.sidebar-toggle {
+    position: absolute; /* keeps the toggle button in the top right of the sidebar */
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: none; 
+    border: none; /* removes the black border */
+    cursor: pointer;
+}
+
+.sidebar-toggle img {
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar-toggle:hover {
+    background: lightgray; /* gives lightgray background around the toggle button to indicate it is clickable */
+    border-radius: 10%;
+}
+
+.sidebar.open {
+    left: 0; /* when open it becomes visible */
+}
+
+.filter-section {
+    margin-bottom: 25px; /* add space between different filter categories */
+}
+
+.filter-section h4 {
+    font-size: 1rem;
+    margin-top: 0px; /* no extra space on top so the first title stays at the top but separating each category with bottom margin */
+    margin-bottom: 10px;
+    color: var(--color-text);
+    text-transform: uppercase; /* makes category titles uppercase */
+}
+
+.filter-section label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+/* selecting checkboxes and giving them small size and a pointer cursor */
+.filter-section input[type="checkbox"] { 
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--color-cta);
+}
+
+/* Wardrobe Clothing Rows */
+.tops h2 {
+    margin-top: 2rem; /* moves title down from top of page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottoms h2 {
+    margin-top: 3rem; /* moves title down from bottom of last container */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.footwear h2 {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.item-container {
+    display: grid;
+    grid-auto-flow: column; /* lays items out horizontally instead of vertically */
+    grid-auto-columns: 300px; /* gives items fixed width */
+    gap: 3rem;
+    margin-left: 50px;
+    
+    overflow-x: scroll; /* allows for horizontal scrolling when items overflow */
+
+    /* Responsive behavior for small screens */
+    @media (width < 690px) {
+        grid-auto-flow: row; /* stack items vertically */
+        justify-content: center;
+    }
+}
+
+.image {
+    max-width: 100%; /* keeps image inside container */
+    height: auto;
+    border-radius: 10%;
+}
+
+/* adds style to area around image */
+.item {
+    padding: 10px;
+    background-color: var(--color-accent-2);
+    border: 5px solid var(--color-accent-1);
+    border-radius: 10%; /* rounds card edges */
+
+    display: grid;
+}
+
+.item .item-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* spreads content evenly inside card */
+}
+
+/* outfit-generator */
+
+
+/* container that holds all three slots */
+#outfit-generator .clothing-container {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+  }
+  
+  /* each clothing box */
+  .clothing-windows {
+    display: flex;            
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  
+    width: 100%;
+    max-width: 650px;         
+    min-height: 260px;        
+  
+    padding: 1rem;
+    border: 1px solid var(--color-cta);
+    border-radius: 10px;
+    background-color: var(--color-base);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  /* middle area: image + lock */
+  .clothing-display {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  
+  /* clothing image: larger but contained */
+  .clothing-display > img {
+    max-width: 100%;
+    max-height: 220px;        
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+/* main clothing images (top, bottoms, shoes) */
+#top-image,
+#bottom-image,
+#shoes-image {
+  max-width: 100%;
+  max-height: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+  /* keep your arrow look; just positioned by flex row now */
+  .clothing-windows.locked {
+    opacity: 0.7;
+    background-color: rgba(154, 110, 95, 0.1);
+}
+
+.clothing-windows.locked .arrow-btn-left-arrow,
+.clothing-windows.locked .arrow-btn-right-arrow {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+  
+  .lock-btn img {
+    width: 32px;             
+    height: 32px;
+    display: block;
+  }
+
+  #generate-outfit-btn {
+    background-color: var(--color-light);      
+    color: var(--color-cta);                  
+    border: 2px solid var(--color-cta);      
+    border-radius: 999px; /* rounded button */
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  #generate-outfit-btn:hover {
+    background-color: var(--color-cta);       
+    color: var(--color-light);                
+  }
+  
+  #generate-outfit-btn:active {
+    background-color: var(--color-cta-dark);  
+    color: var(--color-light);
+  }

@@ -1,0 +1,365 @@
+[
+  {
+    "name": "Arsenal Grey Hoodie",
+    "clothLink": "images/arsHood.jpeg",
+    "category": "tops",
+    "clothingType": "hoodies",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Arsenal Black Sweater",
+    "clothLink": "images/arsSweat.jpeg",
+    "category": "tops",
+    "clothingType": "sweaters",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Nike Black Shorts",
+    "clothLink": "images/blackShort.jpeg",
+    "category": "bottoms",
+    "clothingType": "shorts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Black Arsenal Away Shirt",
+    "clothLink": "images/blackT.jpeg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual",
+      "sportwear"
+    ]
+  },
+  {
+    "name": "Black Cargos",
+    "clothLink": "images/cargo.jpeg",
+    "category": "bottoms",
+    "clothingType": "pants",
+    "season": [
+      "autumn",
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Blue Suit Jacket",
+    "clothLink": "images/jacket.jpeg",
+    "category": "tops",
+    "clothingType": "jackets",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "formal"
+    ]
+  },
+  {
+    "name": "Blue Jeans",
+    "clothLink": "images/jeans.jpeg",
+    "category": "bottoms",
+    "clothingType": "pants",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Khakis",
+    "clothLink": "images/khaki.jpeg",
+    "category": "bottoms",
+    "clothingType": "pants",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "business casual"
+    ]
+  },
+  {
+    "name": "Purple Tennis Shorts",
+    "clothLink": "images/purpShort.jpeg",
+    "category": "bottoms",
+    "clothingType": "shorts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "sportwear"
+    ]
+  },
+  {
+    "name": "Red Dunks",
+    "clothLink": "images/redShoes.jpeg",
+    "category": "footwear",
+    "clothingType": "shoes",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Red Arsenal Home Shirt",
+    "clothLink": "images/redT.jpeg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual",
+      "sportwear"
+    ]
+  },
+  {
+    "name": "Adidas Slides",
+    "clothLink": "images/slides.jpeg",
+    "category": "footwear",
+    "clothingType": "shoes",
+    "season": [
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "White Tennis Shoes",
+    "clothLink": "images/tennisShoes.jpeg",
+    "category": "footwear",
+    "clothingType": "shoes",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "sportwear"
+    ]
+  },
+  {
+    "name": "White Dress Shirt",
+    "clothLink": "images/whiteShirt.jpeg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "formal"
+    ]
+  },
+  {
+    "name": "Blue Jeans 2",
+    "clothLink": "images/Blue_Jeans.jpg",
+    "category": "bottoms",
+    "clothingType": "pants",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Blue Graphic Hoodie",
+    "clothLink": "images/Blue_graphic_hoodie.jpg",
+    "category": "tops",
+    "clothingType": "hoodies",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Blue and White Striped Button-Up",
+    "clothLink": "images/Blue_with_white_stripes_button_up.jpg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual",
+      "business casual",
+      "formal"
+    ]
+  },
+  {
+    "name": "Navy Blue Puffer Jacket",
+    "clothLink": "images/bule_puffer.jpg",
+    "category": "tops",
+    "clothingType": "jackets",
+    "season": [
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Graphic Workout Shirt",
+    "clothLink": "images/graphic_workout_shirt.jpg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "sportwear"
+    ]
+  },
+  {
+    "name": "Grey Sweat Shorts",
+    "clothLink": "images/grey_sweat_shorts.jpg",
+    "category": "bottoms",
+    "clothingType": "shorts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Ice Cube Graphic Tee",
+    "clothLink": "images/Ice_cube_graphic_tee.jpg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Navy Blue Sweatpants",
+    "clothLink": "images/Navy_Blue_Sweatpants.jpg",
+    "category": "bottoms",
+    "clothingType": "pants",
+    "season": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Purple Gap Shirt",
+    "clothLink": "images/Purple_Gap_shirt.jpg",
+    "category": "tops",
+    "clothingType": "shirts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "Soccer Shorts",
+    "clothLink": "images/soccer_shorts.jpg",
+    "category": "bottoms",
+    "clothingType": "shorts",
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "style": [
+      "sportwear"
+    ]
+  },
+  {
+    "name": "White Flip Flops",
+    "clothLink": "images/white_flip_flops.jpg",
+    "category": "footwear",
+    "clothingType": "shoes",
+    "season": [
+      "summer"
+    ],
+    "style": [
+      "casual"
+    ]
+  },
+  {
+    "name": "White Graphic Winter Jacket",
+    "clothLink": "images/white_graphic_whinter_jacket_.jpg",
+    "category": "tops",
+    "clothingType": "jackets",
+    "season": [
+      "autumn",
+      "winter"
+    ],
+    "style": [
+      "casual"
+    ]
+  }
+]
