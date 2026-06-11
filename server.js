@@ -28,3 +28,9 @@ app.post('/login', function(req, res){
         res.json({ success: false, message: 'Incorrect password.' }); // send a response that the authentication was unsuccessful
     }
 });
+
+
+app.listen(3000, function(err){
+    if(err) console.log(err);
+    else console.log('Server listening on port 3000');
+})
