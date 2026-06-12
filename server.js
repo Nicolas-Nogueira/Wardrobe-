@@ -16,7 +16,7 @@ app.post('/login', function(req, res){
     const email = req.body.email;
     const user = credentials[email];
     
-    if(user === undefined) { // if username wasn't found in the credentials object
+    if(user === undefined) { // if Email wasn't found in the credentials object
         res.json({ success: false, message: 'Email does not exist.' }); // send a response that the authentication was unsuccessful
         return;
     }
@@ -28,6 +28,33 @@ app.post('/login', function(req, res){
         res.json({ success: false, message: 'Incorrect password.' }); // send a response that the authentication was unsuccessful
     }
 });
+
+// handle user registration by POST
+app.post('/register', function(req, res){
+    const email = req.body.email;
+    const existingUser = credentials[email];
+
+    if(existingUser !== undefined){ // if the Email already exists in the database 
+        res.json({ success: false, message: 'Email is already taken.' }); // send a failure message stating that the username has already been taken
+        return; // exit the handler
+    }
+     // add new user to the credentials object
+     credentials[email] = { 
+        password: req.body.password,
+        username: req.body.username,
+    };
+
+    // update the credentials.json file with the new credentials object containing the new user
+    fs.writeFile('./data/credentials.json', JSON.stringify(credentials, null, 4), 'utf-8', function(err){
+        if(err) console.log(err);
+        else console.log('Credentials saved to data/credentials.json');
+    })
+
+    // send a success message
+    res.json({ success: true, message: "Registration successful."})
+})
+
+
 
 
 app.listen(3000, function(err){
