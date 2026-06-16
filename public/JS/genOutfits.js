@@ -109,7 +109,7 @@ class App{
 
     //this method fetches the clothes from the json and pushes them to there correct array
     async queryClothes(){
-        const response = await fetch("./clothes.json");
+        const response = await fetch("./clothes");
         const data = await response.json();
         for(const dataObject of data){
 
